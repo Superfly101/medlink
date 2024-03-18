@@ -6,7 +6,7 @@ import Loading from "@/app/loading";
 import { useRouter } from "next/navigation";
 import { baseUrl } from "@/api/baseUrl";
 
-const dateFormat = (inputDate) => {
+const dateFormat = (inputDate: string) => {
   const readableDate = new Date(inputDate).toLocaleDateString("en-US", {
     year: "numeric",
     month: "long",
@@ -16,7 +16,7 @@ const dateFormat = (inputDate) => {
   return readableDate;
 };
 
-const timeFormat = (inputTime) => {
+const timeFormat = (inputTime: string) => {
   const formattedTime = new Date(`2000-01-01T${inputTime}`).toLocaleTimeString(
     "en-US",
     {
