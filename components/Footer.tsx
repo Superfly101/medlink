@@ -1,11 +1,16 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const Footer = () => {
+  const pathName = usePathname();
+  if (pathName !== "/") return null;
   return (
     <footer className="section py-16 bg-accent-900 text-accent-200">
       <h2 className="mb-8">
         <Link href="/" className="text-accent-800 font-extrabold text-2xl">
-          Medlink
+          FindCare
         </Link>
       </h2>
 
